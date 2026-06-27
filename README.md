@@ -132,16 +132,104 @@ Reasons:
 
 ---
 
-## 📉 Visualizations
+# 📊 Project Visualizations
 
-The project includes the following visualizations:
+The following visualizations were generated during Exploratory Data Analysis (EDA) and model evaluation.
 
-* Attrition Rate by Department
-* Attrition Rate by Job Role
-* Monthly Income vs Attrition (Box Plot)
-* Confusion Matrix
-* Top 10 Feature Importance
-* ROC Curve Comparison
+---
+
+## 1️⃣ Attrition Rate by Department
+
+This chart shows the percentage of employees who left each department.
+
+![Department Attrition](charts/department_attrition.png)
+
+**Observation**
+
+- Sales department has the highest employee attrition (~20.6%).
+- Research & Development has the lowest attrition rate.
+
+---
+
+## 2️⃣ Attrition Rate by Job Role
+
+This chart compares employee attrition across different job roles.
+
+![Job Role Attrition](charts/jobrole_attrition.png)
+
+**Observation**
+
+- Sales Representatives have the highest attrition rate (~40%).
+- Laboratory Technicians also experience high employee turnover.
+- Research Directors and Managers have the lowest attrition rates.
+
+---
+
+## 3️⃣ Monthly Income vs Attrition
+
+A box plot comparing employee salary distributions.
+
+![Monthly Income](charts/monthly_income_boxplot.png)
+
+**Observation**
+
+- Employees who left generally have lower monthly income.
+- Salary contributes to attrition but is not the only deciding factor.
+
+---
+
+## 4️⃣ Confusion Matrix (Logistic Regression)
+
+Performance of the best-performing model.
+
+![Confusion Matrix](charts/confusion_matrix.png)
+
+**Observation**
+
+- The model correctly classified most employees who stayed.
+- It also successfully identified many employees who left, making it useful for HR risk prediction.
+
+---
+
+## 5️⃣ Top 10 Most Important Features
+
+Features that contribute the most toward predicting employee attrition.
+
+![Top Features](charts/top10_features.png)
+
+### Top Predictors
+
+1. JobRole_Laboratory Technician
+2. OverTime
+3. BusinessTravel_Travel Frequently
+4. JobLevel
+5. TotalWorkingYears
+6. JobRole_Sales Representative
+7. BusinessTravel_Travel Rarely
+8. EducationField_Life Sciences
+9. YearsSinceLastPromotion
+10. Department_Sales
+
+---
+
+## 6️⃣ ROC Curve Comparison
+
+Comparison of all three Machine Learning models.
+
+![ROC Curve](charts/roc_curve.png)
+
+**ROC-AUC Scores**
+
+| Model | ROC-AUC |
+|--------|---------|
+| Logistic Regression | **0.799** |
+| Gradient Boosting | 0.794 |
+| Random Forest | 0.772 |
+
+**Conclusion**
+
+Logistic Regression achieved the highest ROC-AUC score and provided the best balance between identifying employees likely to leave and maintaining overall performance. Its interpretability also makes it well suited for HR decision-making.
+
 
 ---
 
